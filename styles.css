@@ -1,3 +1,13 @@
+:root {
+    --sky-bg: #dfeef8;
+    --card-bg: rgba(255, 255, 255, 0.62);
+    --card-border: rgba(148, 163, 184, 0.28);
+    --text: #1f2a44;
+    --muted: #475569;
+    --accent: #1d4ed8;
+    --shadow: 0 12px 30px rgba(30, 41, 59, 0.08);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,38 +15,124 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #f4f7ff 0%, #e0ecff 100%);
-    color: #1f2a44;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 30px;
+    padding: 32px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, var(--sky-bg) 0%, #d8ebf7 100%);
+    color: var(--text);
 }
 
-h1 {
-    color: #1d4ed8;
-    font-size: 2.2rem;
-    margin-bottom: 20px;
+.layout {
+    width: min(1200px, 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    padding: 28px 30px;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-card {
+    width: min(290px, 100%);
+    min-height: 180px;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.title-card h1 {
+    color: var(--accent);
+    font-size: clamp(2.3rem, 3vw, 4rem);
+    line-height: 0.95;
+    text-align: center;
+    font-weight: 800;
+}
+
+.title-card span {
+    display: block;
+}
+
+.intro-card,
+.study-card,
+.goal-card {
+    width: min(350px, 100%);
+}
+
+.intro-card p,
+.study-card p,
+.goal-card p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--text);
+    text-align: left;
+}
+
+.study-card {
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.study-card p {
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.study-card ul {
+    margin-left: 20px;
+    list-style: disc;
+    color: var(--muted);
+}
+
+.study-card li {
+    margin: 8px 0;
+    line-height: 1.5;
+}
+
+.goal-card {
+    min-height: 180px;
+    align-items: center;
+}
+
+.goal-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
     text-align: center;
 }
 
-p, li {
-    font-size: 1.05rem;
-    line-height: 1.7;
-    margin-bottom: 10px;
+@media (max-width: 860px) {
+    .layout {
+        gap: 18px;
+    }
+
+    .card {
+        width: min(100%, 500px);
+    }
 }
 
-ul {
-    margin: 15px 0 20px 25px;
-}
+@media (max-width: 560px) {
+    body {
+        padding: 20px 16px;
+    }
 
-body > * {
-    background: rgba(255, 255, 255, 0.75);
-    border: 1px solid rgba(148, 163, 184, 0.4);
-    border-radius: 18px;
-    box-shadow: 0 10px 25px rgba(30, 41, 59, 0.12);
-    max-width: 800px;
-    padding: 30px 35px;
+    .card {
+        min-height: 150px;
+        padding: 22px 20px;
+    }
+
+    .title-card h1 {
+        font-size: 2.2rem;
+    }
 }
