@@ -53,11 +53,13 @@ body {
 }
 
 .title-card h1 {
-    width: 100%;
-    max-width: 220px;
+    display: block;
+    width: min(100%, 220px);
+    margin: 0 auto;
     color: var(--accent);
-    font-size: clamp(2.2rem, 2.8vw, 3.7rem);
-    line-height: 0.9;
+    font-size: clamp(2rem, 2.6vw, 3.4rem);
+    line-height: 0.8;
+    letter-spacing: -0.05em;
     text-align: center;
     font-weight: 800;
     overflow-wrap: anywhere;
