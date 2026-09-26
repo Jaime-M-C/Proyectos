@@ -54,16 +54,16 @@ body {
 
 .title-card h1 {
     display: block;
-    width: min(100%, 220px);
+    width: min(100%, 230px);
     margin: 0 auto;
     color: var(--accent);
-    font-size: clamp(2rem, 2.6vw, 3.4rem);
+    font-size: clamp(2.1rem, 2.9vw, 3.8rem);
     line-height: 0.8;
     letter-spacing: -0.05em;
     text-align: center;
     font-weight: 800;
-    overflow-wrap: anywhere;
-    word-break: break-word;
+    white-space: normal;
+    overflow-wrap: break-word;
 }
 
 .title-card span {
