@@ -54,12 +54,12 @@ body {
 
 .title-card h1 {
     display: block;
-    width: min(100%, 230px);
+    width: min(100%, 215px);
     margin: 0 auto;
     color: var(--accent);
-    font-size: clamp(2.1rem, 2.9vw, 3.8rem);
-    line-height: 0.8;
-    letter-spacing: -0.05em;
+    font-size: clamp(2.05rem, 2.6vw, 3rem);
+    line-height: 0.82;
+    letter-spacing: -0.06em;
     text-align: center;
     font-weight: 800;
     white-space: nowrap;
